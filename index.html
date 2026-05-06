@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For My Beautiful Wife</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fffbfc;
+            --accent-pink: #ffb7c5;
+            --text-color: #9d4d5d;
+        }
+
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            /* Soft cutesy background */
+            background-image: radial-gradient(#ffe3e8 1.5px, transparent 1.5px);
+            background-size: 30px 30px;
+            font-family: 'Gaegu', cursive;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        /* Floating Emoji Layer */
+        #emojiLayer {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .floating-emoji {
+            position: absolute;
+            opacity: 0.5;
+            animation: float-up 15s linear infinite;
+        }
+
+        @keyframes float-up {
+            0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.5; }
+            90% { opacity: 0.5; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Smooth Scroll Setup */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            padding-bottom: 100px;
+        }
+
+        section {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* Polaroid Styling */
+        .polaroid {
+            background: white;
+            padding: 12px 12px 55px 12px;
+            box-shadow: 0 10px 25px rgba(255, 183, 197, 0.3);
+            width: 85%;
+            max-width: 320px;
+            border-radius: 2px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            user-select: none;
+        }
+
+        .polaroid:active {
+            transform: scale(0.98);
+        }
+
+        .polaroid img {
+            width: 100%;
+            aspect-ratio: 1 / 1.2;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .main-caption {
+            margin-top: 15px;
+            font-size: 1.5rem;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            color: var(--text-color);
+        }
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For My Beautiful Wife</title>
+    <!-- Beautiful Fonts for an INFP Vibe -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fffbfc;
+            --accent-pink: #ffb7c5;
+            --text-color: #9d4d5d;
+        }
+
+        /* Prevent unwanted selections and taps */
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            /* Cute dot pattern background */
+            background-image: radial-gradient(#ffe3e8 1.5px, transparent 1.5px);
+            background-size: 30px 30px;
+            font-family: 'Gaegu', cursive;
+            color: var(--text-color);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* Floating Emoji Layer */
+        #emojiLayer {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .floating-emoji {
+            position: absolute;
+            opacity: 0.5;
+            animation: float-up 15s linear infinite;
+        }
+
+        @keyframes float-up {
+            0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.5; }
+            90% { opacity: 0.5; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Main Content Wrapper */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            padding-bottom: 100px;
+        }
+
+        section {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        /* Polaroid Styling */
+        .polaroid {
+            background: white;
+            padding: 12px 12px 55px 12px;
+            box-shadow: 0 10px 25px rgba(255, 183, 197, 0.3);
+            width: 85%;
+            max-width: 320px;
+            border-radius: 2px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            user-select: none;
+        }
+
+        .polaroid:active {
+            transform: scale(0.98);
+        }
+
+        .polaroid img {
+            width: 100%;
+            aspect-ratio: 1 / 1.2;
+            object-fit: cover;
+            border-radius: 2px;
+            display: block;
+            pointer-events: none; /* Allows click to go to polaroid div */
+        }
+
+        .main-caption {
+            margin-top: 15px;
+            font-size: 1.6rem;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            color: var(--text-color);
+        }
+
+        /* Pop-up Compliment Bubbles */
+        .compliment {
+            position: absolute;
+            background: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 1rem;
+            white-space: nowrap;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 1.5px solid var(--accent-pink);
+            pointer-events: none;
+            z-index: 10;
+            animation: popOut 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes popOut {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1) translate(var(--tx), var(--ty)); opacity: 1; }
+        }
+
+        /* Sticky Music Bar */
+        .music-bar {
+            position: fixed;
+            bottom: 25px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        #play-btn {
+            background: white;
+            border: 2px solid var(--accent-pink);
+            border-radius: 30px;
+            padding: 12px 25px;
+            font-family: 'Gaegu';
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--text-color);
+            box-shadow: 0 5px 15px rgba(255, 183, 197, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #play-btn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="emojiLayer"></div>
+
+    <div class="music-bar">
+        <button id="play-btn"><span>💗</span> Press for Music</button>
+        <audio id="bg-music" src="song.mp3" loop></audio>
+    </div>
+
+    <div class="content-wrapper">
+        
+        <!-- Photo 1: Face Appreciation -->
+        <section>
+            <div class="polaroid" onclick="showCompliments(this, ['Your face is pure poetry ✍️', 'The most beautiful face ever 🌸', 'Your eyes are like stars ✨'])">
+                <img src="photo1.jpeg">
+                <div class="main-caption">Tap the photo to see...</div>
+            </div>
+        </section>
+
+        <!-- Photo 2: Hair Appreciation -->
+        <section>
+            <div class="polaroid" style="transform: rotate(3deg);" onclick="showCompliments(this, ['I love your silky hair 🎀', 'The way it catches the light ☀️', 'You have such a gentle glow ✨'])">
+                <img src="photo2.jpeg">
+                <div class="main-caption">Every detail is perfect.</div>
+            </div>
+        </section>
+
+        <!-- Photo 3: Expressions Appreciation -->
+        <section>
+            <div class="polaroid" style="transform: rotate(-3deg);" onclick="showCompliments(this, ['The cutest face in my world 🥰', 'Your lips are so beautiful 💋', 'I love your cute expressions 🧸'])">
+                <img src="photo3.jpeg">
+                <div class="main-caption">My favorite view.</div>
+            </div>
+        </section>
+
+        <!-- Photo 4: Total Appreciation -->
+        <section>
+            <div class="polaroid" onclick="showCompliments(this, ['You are a masterpiece 🎨', 'Perfect from head to toe 💖', 'Queen energy 👑'])">
+                <img src="photo4.jpeg">
+                <div class="main-caption">Beautiful, through and through.</div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // Setup for floating emojis in background
+        const emojiLayer = document.getElementById('emojiLayer');
+        const emojis = ['🌸', '✨', '☁️', '💖', '🧸', '🌷', '🦋', '🍭'];
+        
+        function createEmoji() {
+            const e = document.createElement('div');
+            e.className = 'floating-emoji';
+            e.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+            e.style.left = Math.random() * 100 + 'vw';
+            e.style.animationDuration = (Math.random() * 5 + 12) + 's';
+            e.style.fontSize = (Math.random() * 15 + 20) + 'px';
+            emojiLayer.appendChild(e);
+            setTimeout(() => e.remove(), 15000);
+        }
+        setInterval(createEmoji, 1000);
+
+        // Function to pop out 3 specific compliments
+        function showCompliments(el, texts) {
+            // Remove previous ones from this card
+            const existing = el.querySelectorAll('.compliment');
+            existing.forEach(c => c.remove());
+
+            // Coordinates for the bubbles to pop out to
+            const offsets = [
+                {x: '-100px', y: '-110px'},
+                {x: '100px', y: '-90px'},
+                {x: '0px', y: '-150px'}
+            ];
+
+            texts.forEach((text, i) => {
+                const c = document.createElement('div');
+                c.className = 'compliment';
+                c.innerText = text;
+                c.style.setProperty('--tx', offsets[i].x);
+                c.style.setProperty('--ty', offsets[i].y);
+                c.style.left = '50%';
+                c.style.top = '20%';
+                el.appendChild(c);
+            });
+        }
+
+        // Music Player Controller
+        const audio = document.getElementById('bg-music');
+        const btn = document.getElementById('play-btn');
+        btn.onclick = () => {
+            if (audio.paused) { 
+                audio.play(); 
+                btn.innerHTML = '<span>🌸</span> Melody Playing'; 
+            } else { 
+                audio.pause(); 
+                btn.innerHTML = '<span>💗</span> Press for Music'; 
+            }
+        };
+    </script>
+</body>
+</html>
+
